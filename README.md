@@ -126,8 +126,11 @@ In de login functie wordt het wachtwoord en de username vergeleken met de ingest
 
 Als je vervolgens de website opnieuw bezoekt blijf je ingelogd omdat als de pagina geladen wordt of auth in de localstorage is opgeslagen, totdat de persoon uitlogt is dit het geval, dus hoef je niet opnieuw in te loggen. Ook wordt de gebruikersnaam weer ingesteld met de opgeslagen gebruikersnaam.
 
+### Animaties
+Filmpje gevolgd over AnimatePresence van Framer Motion. Dit gebruikt om de pagina's, ook kleine keyframe animatie toegevoegd aan de nav.
 
 ## Integreren
+Live gezet op Vercel.
 
 ## Testen
 ### Ligthouse
