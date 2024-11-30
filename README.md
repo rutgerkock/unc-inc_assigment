@@ -78,7 +78,7 @@ Eisen:
 ![image](https://github.com/user-attachments/assets/566d4dec-923a-4dce-aae3-48bdcd35c439)
 
 
-> Het idee is dat de gebruiker 2 knoppen heeft totdat er ingelogd wordt, dan komt er een uitlog knop bij.
+> Het idee is dat de gebruiker 2 knoppen heeft totdat er ingelogd wordt, dan komt er een dashboard knop bij en wordt de inlog de uitlog knop.
 
 
 ## Form-Mobiel
