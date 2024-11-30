@@ -75,9 +75,10 @@ Eisen:
 - 3 links (Home, Login en Dashboard)
 - Geanimeerd, niet te gek.
 
-<img width="410" alt="Screenshot 2024-11-30 at 10 33 58" src="https://github.com/user-attachments/assets/ff1aea9c-b87b-486e-af2b-9c3828148584">
+![image](https://github.com/user-attachments/assets/566d4dec-923a-4dce-aae3-48bdcd35c439)
 
-> Het idee is dat de gebruiker op mobiel 2 knoppen heeft, eentje om terug naar home te gaan, en eentje om in te loggen. Als de gebruiker ingelogd is brengt de tweede knop de gebruiker naar het dashboard. 
+
+> Het idee is dat de gebruiker 2 knoppen heeft totdat er ingelogd wordt, dan komt er een dashboard knop bij en wordt de inlog de uitlog knop.
 
 
 ## Form-Mobiel
@@ -85,7 +86,7 @@ Zelfde stijl als de nav.
 
 ## Bouwen
 ### Routes
-Ik ben begonnen met de routes aanmaken en deze met elkeaar te linken zodat ik kan navigeren. Dit heb gedaan met de react-router-dom.
+Ik ben begonnen met de routes aanmaken en deze met elkaar te linken zodat ik kan navigeren. Dit heb gedaan met de react-router-dom.
 ```import { HashRouter as Router, Routes, Route } from 'react-router-dom';```
 
 ### Nav
@@ -126,8 +127,11 @@ In de login functie wordt het wachtwoord en de username vergeleken met de ingest
 
 Als je vervolgens de website opnieuw bezoekt blijf je ingelogd omdat als de pagina geladen wordt of auth in de localstorage is opgeslagen, totdat de persoon uitlogt is dit het geval, dus hoef je niet opnieuw in te loggen. Ook wordt de gebruikersnaam weer ingesteld met de opgeslagen gebruikersnaam.
 
+### Animaties
+Filmpje gevolgd over AnimatePresence van Framer Motion. Dit gebruikt om de pagina's, ook kleine keyframe animatie toegevoegd aan de nav.
 
 ## Integreren
+Live gezet op Vercel.
 
 ## Testen
 ### Ligthouse
