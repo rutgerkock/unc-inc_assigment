@@ -4,9 +4,6 @@ export function Home() {
     return (
         <>
             <h1>Home</h1>
-            <Link to="/">Home</Link>
-            <Link to="/login">Login</Link>
-            <Link to="/dashboard">Dashboard</Link>
         </>
     )
 }
