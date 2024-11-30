@@ -113,3 +113,18 @@ nav .active button {
   justify-content: space-between;
   padding: 0.5rem;
 }
+
+
+nav {
+  animation: slide-in 1s ease-in-out forwards;
+  transform: translateY(100px);
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
