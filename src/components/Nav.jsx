@@ -1,8 +1,7 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
-export function Nav() {
+export function Nav({ logout, auth }) {
     return (
-        <>
         <nav>
             <ul>
                 <li>
@@ -10,18 +9,25 @@ export function Nav() {
                         <button>Home</button>
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink to="/login" activeclassname="active" >
-                        <button>Inloggen</button>
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/dashboard" activeclassname="active" >
-                        <button>Dashboard</button>
-                    </NavLink>
-                </li>
+                {!auth ? (
+                    <li>
+                        <NavLink to="/login" activeclassname="active">
+                            <button>Inloggen</button>
+                        </NavLink>
+                    </li>
+                ) : (
+                    <li>
+                        <button onClick={logout}>Uitloggen</button>
+                    </li>
+                )}
+                {auth && (
+                    <li>
+                        <NavLink to="/dashboard" activeclassname="active">
+                            <button>Dashboard</button>
+                        </NavLink>
+                    </li>
+                )}
             </ul>
         </nav>
-        </>
-    )
+    );
 }

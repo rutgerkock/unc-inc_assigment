@@ -1,8 +1,7 @@
 
-export function Home() {
+export function Home({ username }) {
     return (
-        <>
-            <h1>Home</h1>
-        </>
-    )
-}
+      <h1 className="home">Welkom, {username || 'Gebruiker'}</h1>
+    );
+  }
+  

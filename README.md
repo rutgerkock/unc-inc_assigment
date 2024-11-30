@@ -59,17 +59,28 @@ Nu nadenken over welke routes ik nodig heb:
 - /login
 - /dashboard (Logged in user)
 
+Vervolgens tijd voor het beginnen met bouwen. Hier heb ik een filmpje over een nav met protected routes gevolgd. Hetzelfde verhaal met de inlogfunctie.
+
 ## Ontwerpen
 De website is niet erg uitgebreid en de enige dingen die ik zou moeten ontwerpen waren een nav/menu en een form. Ontwerpen doe ik in Figma. Ik ben mobile-first begonnen om het process makkelijk te houden. 
 
-### Nav
+### Nav-Mobiel
 Eisen:
 - 3 links (Home, Login en Dashboard)
 - Geanimeerd, niet te gek.
 
-![image](https://github.com/user-attachments/assets/2dce11ad-f3df-4b48-9e67-cd572112f7b3)
+![Screenshot Figma 1](<Screenshot 2024-11-30 at 13.47.24.png>) 
+![Screenshot Figma 2](<Screenshot 2024-11-30 at 13.47.18.png>)
+
 > Het idee is dat de gebruiker op mobiel 2 knoppen heeft, eentje om terug naar home te gaan, en eentje om in te loggen. Als de gebruiker ingelogd is brengt de tweede knop de gebruiker naar het dashboard. 
 
+
+## Form-Mobiel
+Zelfde stijl als de nav.
+
+![Alt text](image.png)
+
+> Mobiel design, desktop ben ik nog niet uit.
 
 ## Bouwen
 ### Routes
@@ -77,8 +88,54 @@ Ik ben begonnen met de routes aanmaken en deze met elkeaar te linken zodat ik ka
 ```import { HashRouter as Router, Routes, Route } from 'react-router-dom';```
 
 ### Nav
-Aan de hand van een uitleg-video begonnen met een nav-component. Deze geef ik als Layout bestand weer op elke pagina. 
+Aan de hand van een uitleg-video begonnen met een nav-component. Deze geef ik als Layout bestand weer op elke pagina. Ook gebruik ik de ```activeclassname``` om een andere styling mee te geven aan de actieve pagina.
+
+
+Ik heb verder nog gemaakt dat de gebruiker na het inloggen een uitlog knop in beeld krijgt i.p.v. een login knop, deze logout knop krijgt de logout functie mee, die in het app.js bestand de gegevens uit de lokale opslag verwijderd, de username leegmaakt (zodat deze met gebruiker vervangen wordt) en de auth weer op false zet.
+```
+const logout = () => {
+    setAuth(false);
+    setUsername(''); 
+    localStorage.removeItem('auth');
+    localStorage.removeItem('username'); 
+};
+```
+
+
+### ProtectedRoute.js
+Ik had geen idee hoe ik een route maak waar je niet standaard bij kan. Na het volgen van een uitleg op Youtube is dit gelukt.
+
+
+```
+<Route
+    path="/dashboard"
+    element={<ProtectedRoute auth={auth} element={<Dashboard />} />}
+/>
+``` 
+
+
+Op deze manier kan de route /dashboard alleen bekeken worden als auth=true is, als dat zo is laat hij het dashboard element zien. Als de gebruiker niet ingelogd is en toch op /dashboard probeert te komen, wordt deze doorgestuurd naar /login.
+
+
+### Login
+Op de login pagina heb ik een form gemaakt waar de gebruiker kan inloggen. Als de gegevens gesubmit worden, worden ze vergeleken met de door mij ingestelde gegevens, als deze overeenkomen wordt de data doorgestuurd naar de login-functie, waar de  auth op true gezet en dan wordt de gebruiker doorgestuurd naar /dashboard, als ze niet overeenkomen krijgt de gebruiker een melding met dat de gegevens ongeldig zijn.
+
+
+In de login functie wordt het wachtwoord en de username vergeleken met de ingestelde gegevens, als dat zo is wordt auth op true gezet, en wordt dat in de lokale opslag gezet. Ook wordt de gebruikersnaam als variabele gezet zodat ik deze kan weergeven op de home-pagina. Ook de username wordt in de localstorage gezet. 
+
+Als je vervolgens de website opnieuw bezoekt blijf je ingelogd omdat als de pagina geladen wordt of auth in de localstorage is opgeslagen, totdat de persoon uitlogt is dit het geval, dus hoef je niet opnieuw in te loggen. Ook wordt de gebruikersnaam weer ingesteld met de opgeslagen gebruikersnaam.
+
 
 ## Integreren
 
 ## Testen
+### Ligthouse
+Voor de lighthouse accesibilty test heb ik een 100% score.
+![Alt text](image-1.png)
+
+### Tab test
+Ik kan moeiteloos de hele pagina door tabben, het form door en deze verzenden.
+
+### Screenreader
+Ik heb ook een screenreader test gedaan, hiermee kon ik begrijpelijk de pagina door en het form invullen en verzenden.
+![Alt text](<Screenshot 2024-11-30 at 14.37.48.png>)
