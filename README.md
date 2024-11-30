@@ -67,7 +67,7 @@ Eisen:
 - 3 links (Home, Login en Dashboard)
 - Geanimeerd, niet te gek.
 
-![image](https://github.com/user-attachments/assets/447c9696-e554-4edb-9744-70defbfcc4ab)
+![image](https://github.com/user-attachments/assets/2dce11ad-f3df-4b48-9e67-cd572112f7b3)
 > Het idee is dat de gebruiker op mobiel 2 knoppen heeft, eentje om terug naar home te gaan, en eentje om in te loggen. Als de gebruiker ingelogd is brengt de tweede knop de gebruiker naar het dashboard. 
 
 
