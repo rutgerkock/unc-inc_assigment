@@ -86,7 +86,7 @@ Zelfde stijl als de nav.
 
 ## Bouwen
 ### Routes
-Ik ben begonnen met de routes aanmaken en deze met elkeaar te linken zodat ik kan navigeren. Dit heb gedaan met de react-router-dom.
+Ik ben begonnen met de routes aanmaken en deze met elkaar te linken zodat ik kan navigeren. Dit heb gedaan met de react-router-dom.
 ```import { HashRouter as Router, Routes, Route } from 'react-router-dom';```
 
 ### Nav
