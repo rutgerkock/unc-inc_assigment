@@ -59,7 +59,13 @@ Nu nadenken over welke routes ik nodig heb:
 - /login
 - /dashboard (Logged in user)
 
-Vervolgens tijd voor het beginnen met bouwen. Hier heb ik een filmpje over een nav met protected routes gevolgd. Hetzelfde verhaal met de inlogfunctie.
+Vervolgens moet ik deze dingen uitzoeken:
+- Hoe maak je routes?
+- Hoe maak je componenten?
+- Hoe maak je een route waar je niet bij kan komen zonder in te loggen?
+- Hoe log je in?
+- Hoe sla je dingen op tussen sessies?
+- Hoe log je uit?
 
 ## Ontwerpen
 De website is niet erg uitgebreid en de enige dingen die ik zou moeten ontwerpen waren een nav/menu en een form. Ontwerpen doe ik in Figma. Ik ben mobile-first begonnen om het process makkelijk te houden. 
