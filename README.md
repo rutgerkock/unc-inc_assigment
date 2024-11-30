@@ -77,7 +77,7 @@ Eisen:
 
 <img width="410" alt="Screenshot 2024-11-30 at 10 33 58" src="https://github.com/user-attachments/assets/ff1aea9c-b87b-486e-af2b-9c3828148584">
 
-> Het idee is dat de gebruiker op mobiel 2 knoppen heeft, eentje om terug naar home te gaan, en eentje om in te loggen. Als de gebruiker ingelogd is brengt de tweede knop de gebruiker naar het dashboard. 
+> Het idee is dat de gebruiker 2 knoppen heeft totdat er ingelogd wordt, dan komt er een uitlog knop bij.
 
 
 ## Form-Mobiel
