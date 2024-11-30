@@ -133,4 +133,5 @@ Ik kan moeiteloos de hele pagina door tabben, het form door en deze verzenden.
 
 ### Screenreader
 Ik heb ook een screenreader test gedaan, hiermee kon ik begrijpelijk de pagina door en het form invullen en verzenden.
+
 <img width="740" alt="Screenshot 2024-11-30 at 14 37 48" src="https://github.com/user-attachments/assets/21787ea0-e172-4d77-a34d-4c4cb3d9dac1">
