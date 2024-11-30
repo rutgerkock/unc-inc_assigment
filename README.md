@@ -75,6 +75,9 @@ Eisen:
 - 3 links (Home, Login en Dashboard)
 - Geanimeerd, niet te gek.
 
+![image](https://github.com/user-attachments/assets/566d4dec-923a-4dce-aae3-48bdcd35c439)
+
+
 > Het idee is dat de gebruiker 2 knoppen heeft totdat er ingelogd wordt, dan komt er een uitlog knop bij.
 
 
