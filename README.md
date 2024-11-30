@@ -69,18 +69,13 @@ Eisen:
 - 3 links (Home, Login en Dashboard)
 - Geanimeerd, niet te gek.
 
-![Screenshot Figma 1](<Screenshot 2024-11-30 at 13.47.24.png>) 
-![Screenshot Figma 2](<Screenshot 2024-11-30 at 13.47.18.png>)
+<img width="410" alt="Screenshot 2024-11-30 at 10 33 58" src="https://github.com/user-attachments/assets/ff1aea9c-b87b-486e-af2b-9c3828148584">
 
 > Het idee is dat de gebruiker op mobiel 2 knoppen heeft, eentje om terug naar home te gaan, en eentje om in te loggen. Als de gebruiker ingelogd is brengt de tweede knop de gebruiker naar het dashboard. 
 
 
 ## Form-Mobiel
 Zelfde stijl als de nav.
-
-![Alt text](image.png)
-
-> Mobiel design, desktop ben ik nog niet uit.
 
 ## Bouwen
 ### Routes
@@ -131,11 +126,11 @@ Als je vervolgens de website opnieuw bezoekt blijf je ingelogd omdat als de pagi
 ## Testen
 ### Ligthouse
 Voor de lighthouse accesibilty test heb ik een 100% score.
-![Alt text](image-1.png)
+<img width="713" alt="Screenshot 2024-11-30 at 14 33 25" src="https://github.com/user-attachments/assets/99476e93-6e8a-4bf0-8aa3-48699d7b2f85">
 
 ### Tab test
 Ik kan moeiteloos de hele pagina door tabben, het form door en deze verzenden.
 
 ### Screenreader
 Ik heb ook een screenreader test gedaan, hiermee kon ik begrijpelijk de pagina door en het form invullen en verzenden.
-![Alt text](<Screenshot 2024-11-30 at 14.37.48.png>)
+<img width="740" alt="Screenshot 2024-11-30 at 14 37 48" src="https://github.com/user-attachments/assets/21787ea0-e172-4d77-a34d-4c4cb3d9dac1">
