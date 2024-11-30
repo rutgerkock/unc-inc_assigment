@@ -1,17 +1,27 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export function Nav() {
     return (
         <>
-            <Link to="/">
-                <button>Home</button>
-            </Link>
-            <Link to="/login">
-                <button>Inloggen</button>
-            </Link>
-            <Link to="/dashboard">
-                <button>Dashboard</button>
-            </Link>
+        <nav>
+            <ul>
+                <li>
+                    <NavLink to="/" activeclassname="active">
+                        <button>Home</button>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/login" activeclassname="active" >
+                        <button>Inloggen</button>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/dashboard" activeclassname="active" >
+                        <button>Dashboard</button>
+                    </NavLink>
+                </li>
+            </ul>
+        </nav>
         </>
     )
 }

@@ -31,3 +31,38 @@ h1 {
   font-weight: var(--title-font-weight);
   font-family: var(--font-family);
 }
+
+nav ul {
+  list-style: none;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+nav button {
+  padding: 0.5rem;
+  background-color: var(--background-color);
+  border-radius: 1.25rem;
+  border: 4px solid var(--text-color);
+  box-shadow: -3px 3px 0px white;
+  color: var(--text-color);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  font-family: var(--font-family);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+nav button:active {
+  box-shadow: -2px 2px 0px white; 
+  transform: translate(2px, 2px);
+}
+
+nav .active button {
+  background-color: var(--text-color); 
+  color: var(--background-color);
+}
