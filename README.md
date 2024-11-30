@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Unc Inc Assessment - React routing
+This is an assessment to implement a React app with several pages that can be accessed by URL paths in your browser. Some of these routes are accessible anonymously, while others can only be accessed after a user is logged in. We also want you to showcase your frontend skills by implementing page transitions and animations for a e.g the menu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technical requirements
 
-## Available Scripts
+- React, v17 or higher.
+- Use yarn, not npm.
+- You can use Typescript, or 'regular' JavaScript, whichever you prefer.
+- You can use a project generator like Create React App (or alike).
+- Use Git, send us the repository by making a git bundle, a ZIP file, or just share an online link to the repo.
+- The code needs to adhere to the standard React and Airbnb standards.
+- Use whatever editor or IDE you prefer.
 
-In the project directory, you can run:
+## General requirements
 
-### `yarn start`
+- Start your project by writing down a small plan, and share this with us.
+- Keep track of your progress using separate git commits with useful commit messages.
+- Choose external packages wisely. Do not write unnecessary code yourself.
+- This assessment does not cover a backend to communicate with. Some things can be hard-coded.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Functional requirements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- As a regular user, I want to be able to access the homepage on either / or /home.
+- As a regular user, I want to be able to login using a form on /login with username "uncinc" and password "letmein" in order to become a logged in user.
+- As a regular user, I want to get a message if I fill out wrong credentials.
+- As a logged in user, I want to be able to access a dashboard on /dashboard.
+- As a regular user, I want to access /dashboard from /home.
+- As a regular user, I want to be redirected to the login form when trying to access a page that I have no access to.
+- As a regular user, I want to be redirected from the login form to the page I originally wanted to go to.
+- As a logged in user, I want my session to be remembered, so that I can come back to the dashboard later without having to log in again.
+- As a logged in user, I want to be able to log out.
+- The application should have page transitions.
+- The menu should have animations.
+- Add as many accessibility (a11y) as you can fit within the time.
 
-### `yarn test`
+## Things we will look out for
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Proper interpretation of the assignment: how well you read the assignment and specifications.
+- State management: how you deal with data being stored and shared throughout the application.
+- Don't overuse animations, make them almost functional. We want you to showcase your skills, but we are not looking for a Las Vegas show :)
+- Proper use of existing packages: which packages you select, and why.
+- Code quality: how easy to understand your code is, and how well it conforms to standards.
+- A README explaining your thoughts and choices made during the assessment.
+- Use of tests (this is not obligated but a big plus!)
+- Good use of Git so send us a git repo
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Things we will NOT look out for
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Security of the credentials, that is NOT part of this assignment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+# Plan van aanpak
+## Analyseren
+Ik heb React of Yarn niet eerder gebruikt, dus ik ben begonnen de [start-gids van React](https://create-react-app.dev/docs/getting-started/) doorlezen en een React-app aanmaken met Yarn. Vervolgens geprobeerd de app te starten met yarn start, dit werkte. Een repo aangemaakt en de eerste push gedaan + readme aangemaakt.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Nu nadenken over welke routes ik nodig heb:
+- /home (/ of /home)
+- /login
+- /dashboard (Logged in user)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Ontwerpen
+De website is niet erg uitgebreid en de enige dingen die ik zou moeten ontwerpen waren een nav/menu en een form. Ontwerpen doe ik in Figma. Ik ben mobile-first begonnen om het process makkelijk te houden. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Nav
+Eisen:
+- 3 links (Home, Login en Dashboard)
+- Geanimeerd, niet te gek.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![image](https://github.com/user-attachments/assets/2dce11ad-f3df-4b48-9e67-cd572112f7b3)
+> Het idee is dat de gebruiker op mobiel 2 knoppen heeft, eentje om terug naar home te gaan, en eentje om in te loggen. Als de gebruiker ingelogd is brengt de tweede knop de gebruiker naar het dashboard. 
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Bouwen
+### Routes
+Ik ben begonnen met de routes aanmaken en deze met elkeaar te linken zodat ik kan navigeren. Dit heb gedaan met de react-router-dom.
+```import { HashRouter as Router, Routes, Route } from 'react-router-dom';```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Nav
+Aan de hand van een uitleg-video begonnen met een nav-component. Deze geef ik als Layout bestand weer op elke pagina. 
 
-### Code Splitting
+## Integreren
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Testen
