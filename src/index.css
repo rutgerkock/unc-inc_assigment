@@ -84,6 +84,10 @@ button {
   width: 50%;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 form {
   display: flex;
   flex-direction: column;

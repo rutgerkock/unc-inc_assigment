@@ -7,6 +7,8 @@ export function Login({ login }) {
 
     const navigate = useNavigate(); 
 
+
+    // SUBMIT
     const handleSubmit = (e) => {
         e.preventDefault();
         if (username === 'uncinc' && password === 'letmein') {
@@ -17,6 +19,8 @@ export function Login({ login }) {
         }
     }
 
+    // HTML
+
     return (
         <section>
             <h1>Login</h1>
@@ -25,6 +29,7 @@ export function Login({ login }) {
                 <input
                     type="text"
                     value={username}
+                    required
                     onChange={(e) => setUsername(e.target.value)}
                 />
                 </label>
@@ -32,6 +37,7 @@ export function Login({ login }) {
                 <input
                     type="password"
                     value={password}
+                    required
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 </label>

@@ -23,6 +23,7 @@ function App() {
     }
   }, []);
 
+  // LOGIN
   const login = (username, password) => {
     if (username === 'uncinc' && password === 'letmein') {
       setAuth(true);
@@ -34,6 +35,7 @@ function App() {
     }
   };
 
+  // LOGOUT
   const logout = () => {
     setAuth(false);
     setUsername(''); 
@@ -41,12 +43,15 @@ function App() {
     localStorage.removeItem('username'); 
   };
 
+  // PAGE TRANSITION
   const pageTransition = {
     initial: { opacity: 0, x: -400, scale: 0.95 }, 
     animate: { opacity: 1, x: 0, scale: 1, transition: { type: 'spring', stiffness: 100, damping: 25 } },  
     exit: { opacity: 0, x: 100, scale: 1.05, transition: { duration: 0.3 } },  
   };
 
+
+  // HTML
   return (
     <Router>
       <AnimatePresence>
